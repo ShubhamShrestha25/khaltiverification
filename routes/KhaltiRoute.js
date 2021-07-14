@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
+require("dotenv").config();
 
 router.get("/transaction", function (req, res) {
   let data = {
@@ -11,7 +12,7 @@ router.get("/transaction", function (req, res) {
   let config = {
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Key test_secret_key_ed6cdba88a1649068eff4d2f5047b83c",
+      Authorization: `Key ${process.env.SECRET_KEY}`,
     },
   };
 
