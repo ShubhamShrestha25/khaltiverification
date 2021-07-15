@@ -14,6 +14,6 @@ app.listen(port, function (error) {
   if (error) {
     console.log("SOMTHING WENT WRONG");
   } else {
-    console.log("SERVER IS RUNNING ON PORT 5000");
+    console.log(`SERVER IS RUNNING ON PORT ${port}`);
   }
 });
